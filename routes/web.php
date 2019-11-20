@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+// 指定の場合は下記記述
+// Route::get('baby', 'BabyController@index');
+Route::resource('baby', 'BabyController');
