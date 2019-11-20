@@ -11,6 +11,9 @@ class BabysTableSeeder extends Seeder
      */
     public function run()
     {
+             // BooksTableSeederを読み込むように指定
+     $this->call(BabysTableSeeder::class);
+    
           // テーブルのクリア
     DB::table('babys')->truncate();
 
