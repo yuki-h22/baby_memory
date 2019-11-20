@@ -17,7 +17,7 @@ class BabysTableSeeder extends Seeder
     // 初期データ用意（列名をキーとする連想配列）
     $babys = [
               ['name' => 'hinata',
-               'birthday' => 20181003]
+               'birthday' => 20181003],
               ['name' => 'kotona',
                'birthday' => 20190501]
              ];
