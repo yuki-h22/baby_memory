@@ -7,6 +7,7 @@
     </div>
     <div class="row">
         <div class="col-md-8 col-md-offset-1">
+          @include('baby/message')
           @if($target == 'store')
           <form action="/baby" method="post">
           @elseif($target == 'update')
