@@ -31,7 +31,7 @@ class BabyController extends Controller
   public function create()
   {
       $baby = new Baby();
-      return view('book/create', compact('baby'));
+      return view('baby/create', compact('baby'));
   }
 
   public function edit($id)
