@@ -25,4 +25,23 @@ class BabyController extends Controller
       // 取得した値をビュー「baby/edit」に渡す
       return view('baby/edit', compact('baby'));
   }
+
+  public function update(Request $request, $id)
+  {
+      $baby = Baby::findOrFail($id);
+      $baby->name = $request->name;
+      $baby->birthday = $request->birthday;
+      $baby->save();
+
+      return redirect("/baby");
+  }
+
+  public function destroy($id)
+  {
+      $baby = Baby::findOrFail($id);
+      $baby->delete();
+
+      return redirect("/baby");
+  }
+
 }
