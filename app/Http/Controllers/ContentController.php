@@ -16,6 +16,6 @@ class ContentController extends Controller
     public function create()
     {
         $content = new Content();
-        return view('baby/create', compact('baby'));
+        return view('content/create', compact('content'));
     }
 }
