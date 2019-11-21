@@ -11,7 +11,7 @@ class BabyController extends Controller
   public function index()
   {
       // DBよりbabyテーブルの値を全て取得
-      $babys = Baby::all();
+      $babies = Baby::all();
 
       // 取得した値をビュー「baby/index」に渡す
       return view('baby/index', compact('babys'));
