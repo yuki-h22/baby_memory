@@ -14,7 +14,7 @@ class BabyController extends Controller
       $babies = Baby::all();
 
       // 取得した値をビュー「baby/index」に渡す
-      return view('baby/index', compact('babys'));
+      return view('baby/index', compact('babies'));
   }
 
   public function edit($id)
