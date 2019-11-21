@@ -17,6 +17,23 @@ class BabyController extends Controller
       return view('baby/index', compact('babies'));
   }
 
+  public function store(Request $request)
+  {
+      $baby = new Baby();
+      $baby->name = $request->name;
+      $baby->birthday = $request->birthday;
+      $baby->image = $request->image;
+      $baby->save();
+
+      return redirect("/baby");
+  }
+
+  public function create()
+  {
+      $baby = new Baby();
+      return view('book/create', compact('baby'));
+  }
+
   public function edit($id)
   {
       // DBよりURIパラメータと同じIDを持つbabyの情報を取得
