@@ -3,17 +3,17 @@
 <div class="container ops-main">
 <div class="row">
   <div class="col-md-12">
-    <h3 class="ops-title">書籍一覧</h3>
+    <h3 class="ops-title">赤ちゃんたち</h3>
   </div>
 </div>
 <div class="row">
   <div class="col-md-11 col-md-offset-1">
     <table class="table text-center">
       <tr>
-        <th class="text-center">ID</th>
-        <th class="text-center">書籍名</th>
-        <th class="text-center">価格</th>
-        <th class="text-center">著者</th>
+        <th class="text-center">番号</th>
+        <th class="text-center">おなまえ</th>
+        <th class="text-center">お誕生日</th>
+        <th class="text-center">写真</th>
         <th class="text-center">削除</th>
       </tr>
       @foreach($babies as $baby)
@@ -33,7 +33,7 @@
       </tr>
       @endforeach
     </table>
-    <div><a href="/baby/create" class="btn btn-default">新規作成</a></div>
+    <div><a href="/baby/create" class="btn btn-default">赤ちゃんが生まれたよ</a></div>
   </div>
 </div>
 @endsection
