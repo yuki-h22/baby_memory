@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\BabyRequest;
 use App\Baby;
 
 class BabyController extends Controller
@@ -17,7 +17,7 @@ class BabyController extends Controller
       return view('baby/index', compact('babies'));
   }
 
-  public function store(Request $request)
+  public function store(BabyRequest $request)
   {
       $baby = new Baby();
       $baby->name = $request->name;
@@ -43,7 +43,7 @@ class BabyController extends Controller
       return view('baby/edit', compact('baby'));
   }
 
-  public function update(Request $request, $id)
+  public function update(BabyRequest $request, $id)
   {
       $baby = Baby::findOrFail($id);
       $baby->name = $request->name;
