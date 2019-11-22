@@ -1,7 +1,11 @@
-@section('top_page')
+@extends('baby/layout')
+@section('toppage')
 <div class="side_bar">
+  サイド
     <div class="side_bar_top">
+      top
         <div class="side_bar_top_image">
+            image
         </div>
     </div>
     <div class="side_bar_data">
@@ -26,6 +30,4 @@
     </div>
     <div class="main_edit_btn"></div>
 </div>
-
-
 @endsection
