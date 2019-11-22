@@ -21,14 +21,14 @@
 
 </ul>
 <ul class="content">
-  <li>@yield('top')</li>
-  <li class="hide">なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。</li>
-  <li class="hide">新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。</li>
-  <li class="hide">弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。</li>
-  <li class="hide">タブ2</li>
-  <li class="hide">タブ3</li>
-  <li class="hide">タブ4</li>
-  <li class="hide">@yield('content')</li>
+  <li> @yield('top') </li>
+  <li class="hide"> @yield('photo02') </li>
+  <li class="hide"> @yield('photo35') </li>
+  <li class="hide"> @yield('photo68') </li>
+  <li class="hide"> @yield('photo911') </li>
+  <li class="hide"> @yield('photo1') </li>
+  <li class="hide"> @yield('content') </li>
+  <li class="hide"> @yield('setting')</li>
 
 </ul>
 
