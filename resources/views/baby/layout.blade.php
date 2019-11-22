@@ -27,7 +27,7 @@
   <li class="hide"> @yield('photo68') </li>
   <li class="hide"> @yield('photo911') </li>
   <li class="hide"> @yield('photo1') </li>
-  <li class="hide"> @yield('content') </li>
+  <li class="hide"> @yield('otheralbum') </li>
   <li class="hide"> @yield('setting')</li>
 
 </ul>
