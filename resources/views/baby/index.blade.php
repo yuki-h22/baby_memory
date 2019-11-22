@@ -10,7 +10,6 @@
   <div class="col-md-11 col-md-offset-1">
     <table class="table text-center">
       <tr>
-        <th class="text-center">番号</th>
         <th class="text-center">おなまえ</th>
         <th class="text-center">お誕生日</th>
         <th class="text-center">写真</th>
@@ -19,10 +18,10 @@
       @foreach($babies as $baby)
       <tr>
         <td>
-          <a href="/baby/{{ $baby->id }}/edit">{{ $baby->id }}</a>
+          <a href="/baby/{{ $baby->id }}/edit">{{ $baby->name }}</a>
         </td>
-        <td>{{ $baby->name }}</td>
         <td>{{ $baby->birthday }}</td>
+        <td>{{ $baby->image }}</td>
         <td>
           <form action="/baby/{{ $baby->id }}" method="post">
             <input type="hidden" name="_method" value="DELETE">
