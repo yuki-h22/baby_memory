@@ -1,34 +1,75 @@
-<head>
-  <title>Baby memorY</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/sass/reset.scss">
-  <link rel="stylesheet" href="/css/sass/tab.scss">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/script.js"></script>
-  {{-- <script src="js/aa.js"></script> --}}
+@extends('baby/layout')
+@section('content')
+<div class="container ops-main">
+<div class="row">
+  <div class="col-md-12">
+    <h3 class="ops-title">赤ちゃんたち</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-11 col-md-offset-1">
+    <table class="table text-center">
+      <tr>
+        <th class="text-center">おなまえ</th>
+        <th class="text-center">お誕生日</th>
+        <th class="text-center">写真</th>
+        <th class="text-center">削除</th>
+      </tr>
+      @foreach($babies as $baby)
+      <tr>
+        <td>
+          <a href="/baby/{{ $baby->id }}/edit">{{ $baby->name }}</a>
+        </td>
+        <td>{{ $baby->birthday }}</td>
+        <td>{{ $baby->image }}</td>
+        <td>
+          <form action="/baby/{{ $baby->id }}" method="post">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <button type="submit" class="btn btn-xs btn-danger" aria-label="Left Align"><span class="glyphicon glyphicon-trash"></span></button>
+          </form>
+        </td>
+      </tr>
+      @endforeach
+    </table>
+    <div><a href="/baby/create" class="btn btn-default">赤ちゃんが生まれたよ</a></div>
+  </div>
+</div>
+@endsection
 
-</head>
 
-<ul class="tab">
-  <li class="active">TOP Page</li>
-  <li>０〜2ヶ月</li>
-  <li>３〜5ヶ月</li>
-  <li>６〜8ヶ月</li>
-  <li>９〜11ヶ月</li>
-  <li>１歳〜</li>
-  <li>アルバム</li>
-  <li>設定</li>
+@section('top')
+<div class="side_bar">
+    サイド
+      <div class="side_bar_top">
+        top
+          <div class="side_bar_top_image">
+              image
+          </div>
+      </div>
+      <div class="side_bar_data">
+          <div class="side_bar_data_name"></div>
+          <div class="side_bar_data_birthday"></div>
+      </div>
+      <div class="side_bar_under">
+          <div class="side_bar_under_image">
+          </div>
+      </div>
+      <div class="side_bar_bottom">
+          <div class="side_bar_bottom_message"></div>
+      </div>
+  <div class="main">
+      <div class="main_top"></div>
+      <div class="main_content">
+          <div class="main_content_data">
+              <div class="main_content_data_image"></div>
+              <div class="main_content_data_title"></div>
+          </div>
+          <div class="main_content_comment"></div>
+      </div>
+      <div class="main_edit_btn"></div>
+  </div>
+  
+@endsection
 
-</ul>
-<ul class="content">
-  <li></li>
-  <li class="hide">なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。</li>
-  <li class="hide">新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。</li>
-  <li class="hide">弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。</li>
-  <li class="hide">タブ2</li>
-  <li class="hide">タブ3</li>
-  <li class="hide">タブ4</li>
-  <li class="hide">@yield('content')</li>
-
-</ul>
-
+@yield('test')
