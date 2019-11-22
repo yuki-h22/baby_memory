@@ -1,5 +1,65 @@
 @extends('baby/layout')
-@section('content')
+
+@section('top')
+<div class="side_bar">
+    サイド
+      <div class="side_bar_top">
+        top
+          <div class="side_bar_top_image">
+              image
+          </div>
+      </div>
+      <div class="side_bar_data">
+          <div class="side_bar_data_name"></div>
+          <div class="side_bar_data_birthday"></div>
+      </div>
+      <div class="side_bar_under">
+          <div class="side_bar_under_image">
+          </div>
+      </div>
+      <div class="side_bar_bottom">
+          <div class="side_bar_bottom_message"></div>
+      </div>
+  <div class="main">
+      <div class="main_top"></div>
+      <div class="main_content">
+          <div class="main_content_data">
+              <div class="main_content_data_image"></div>
+              <div class="main_content_data_title"></div>
+          </div>
+          <div class="main_content_comment"></div>
+      </div>
+      <div class="main_edit_btn"></div>
+  </div>
+@endsection
+
+@section('photo02')
+    gazou
+@endsection
+
+@section('photo35')
+    gazou
+@endsection
+
+@section('photo68')
+    gazou
+@endsection
+
+@section('photo911')
+    gazou
+@endsection
+
+@section('photo1')
+    gazou
+@endsection
+
+@section('album')
+    gazou
+@endsection
+
+
+
+@section('setting')
 <div class="container ops-main">
 <div class="row">
   <div class="col-md-12">
@@ -37,39 +97,6 @@
 </div>
 @endsection
 
-
-@section('top')
-<div class="side_bar">
-    サイド
-      <div class="side_bar_top">
-        top
-          <div class="side_bar_top_image">
-              image
-          </div>
-      </div>
-      <div class="side_bar_data">
-          <div class="side_bar_data_name"></div>
-          <div class="side_bar_data_birthday"></div>
-      </div>
-      <div class="side_bar_under">
-          <div class="side_bar_under_image">
-          </div>
-      </div>
-      <div class="side_bar_bottom">
-          <div class="side_bar_bottom_message"></div>
-      </div>
-  <div class="main">
-      <div class="main_top"></div>
-      <div class="main_content">
-          <div class="main_content_data">
-              <div class="main_content_data_image"></div>
-              <div class="main_content_data_title"></div>
-          </div>
-          <div class="main_content_comment"></div>
-      </div>
-      <div class="main_edit_btn"></div>
-  </div>
-  
+@section('content')
+@include('baby/form', ['target' => 'update'])
 @endsection
-
-@yield('test')
