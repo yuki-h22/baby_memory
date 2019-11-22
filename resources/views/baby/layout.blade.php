@@ -15,9 +15,9 @@
   <li>３〜5ヶ月</li>
   <li>６〜8ヶ月</li>
   <li>９〜11ヶ月</li>
-  <li>１歳〜</li>
-  <li>アルバム</li>
-  <li>設定</li>
+  <li>  １歳〜  </li>
+  <li> アルバム </li>
+  <li>  設定  </li>
 
 </ul>
 <ul class="content">
