@@ -1,5 +1,5 @@
-@extends('baby/')
-@section('toppage')
+@extends('baby/index')
+@section('test2')
 <div class="side_bar">
   サイド
     <div class="side_bar_top">
@@ -30,4 +30,4 @@
     </div>
     <div class="main_edit_btn"></div>
 </div>
-@endsection
+@overwrite
