@@ -1,4 +1,4 @@
-@extends('baby/layout')
+@extends('baby/')
 @section('toppage')
 <div class="side_bar">
   サイド
