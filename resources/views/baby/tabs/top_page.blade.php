@@ -4,7 +4,11 @@
     <div class="side_bar_top">
       top
         <div class="side_bar_top_image">
-            image
+            @if($user->image == null)
+                <img src="/storage/noimage.png">
+            @else
+                <img src="/storage/{{$user->image}}">
+            @endif
         </div>
     </div>
     <div class="side_bar_data">
