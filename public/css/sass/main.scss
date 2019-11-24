@@ -1,0 +1,22 @@
+.main{
+  position: absolute;
+  top: 110px;
+  left: 300px;
+  float: right;
+  height: calc(100% - 130px);
+  width: calc(100% - 320px);
+  background-color: blue;
+  &_top{
+    height: 50px;
+  }
+  &_content{
+    &_data{
+      &_image{
+        &_title{
+          align-items: center;
+        }
+      }
+    }
+
+  }
+}
