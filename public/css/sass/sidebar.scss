@@ -3,6 +3,31 @@
   width: 260px;
   background-color: red;
   &_top{
-    
+    height: 150px;
+    width: 150px;
+    &_image{
+      border-radius: 10px;
+    }
+  }
+  &_data{
+    widows: 100%;
+    height: 100px;
+    &_name{
+      align-items: center;
+    }
+    &_birthday{
+      align-items: center;
+    }
+  }
+  &_under{
+    height: 50px;
+    &_image{
+      border-radius: 10px;
+    }
+  }
+  &_bottom{
+    &_message{
+      align-items: center;
+    }
   }
 }
