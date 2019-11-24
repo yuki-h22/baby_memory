@@ -15,6 +15,7 @@
   <h1 class="head">Baby mamorY</h1>
 </header>
 
+<body class = "body">
 <ul class="tab">
   <li class="select">TOP Page</li>
   <li>０〜2ヶ月</li>
@@ -38,3 +39,4 @@
 
 </ul>
 
+</body>
