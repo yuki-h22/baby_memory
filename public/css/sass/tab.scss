@@ -1,6 +1,7 @@
+.head{height: 50px;}
 .tab{overflow:hidden;margin: 0px 40px;}
-.tab li{background:#ccc; padding:10px 5px; float:left; margin-right:3px;text-align: center;margin: 0px 5px;}
-.tab li.select{background:#eee;}
-.content li{background:#eee; padding:20px; height: 100%;}
+.tab li{background:#F0E68C; padding:10px 5px; float:left; margin-right:3px;text-align: center;margin: 0px 5px;}
+.tab li.select{background:#FFFACD;}
+.content li{background:#FFFACD; padding:20px; height: calc(100% - 90px);}
 .hide {display:none;}
-.tab li{width: calc((100% - 80px)/8);border-top-left-radius: 20px 10px;border-top-right-radius: 20px 10px;}
+.tab li{width: calc((100% - 80px)/8);border-top-left-radius: 20px 10px;border-top-right-radius: 20px 10px;height: 40px;}
