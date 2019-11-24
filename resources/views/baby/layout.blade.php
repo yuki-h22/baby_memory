@@ -3,6 +3,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/sass/reset.scss">
   <link rel="stylesheet" href="/css/sass/tab.scss">
+  <link rel="stylesheet" href="/css/sass/main.scss">
   <link rel="stylesheet" href="/css/sass/sidebar.scss">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/script.js"></script>
@@ -10,8 +11,12 @@
 
 </head>
 
+<header>
+  <h1 class="head">Baby mamorY</h1>
+</header>
+
 <ul class="tab">
-  <li class="active">TOP Page</li>
+  <li class="select">TOP Page</li>
   <li>０〜2ヶ月</li>
   <li>３〜5ヶ月</li>
   <li>６〜8ヶ月</li>
