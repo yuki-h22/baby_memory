@@ -18,15 +18,18 @@
     <div class="side_bar_bottom">
         <div class="side_bar_bottom_message"></div>
     </div>
+</div>
 <div class="main">
-    <div class="main_top"></div>
+    外側
+    <div class="main_top">タイトル</div>
     <div class="main_content">
+        コンテンツ
         <div class="main_content_data">
-            <div class="main_content_data_image"></div>
-            <div class="main_content_data_title"></div>
+            <div class="main_content_data_image">写真</div>
+            <div class="main_content_data_title">タイトル</div>
         </div>
-        <div class="main_content_comment"></div>
+        <div class="main_content_comment">コメント</div>
     </div>
-    <div class="main_edit_btn"></div>
+    <div class="main_edit_btn">ボタン</div>
 </div>
 @overwrite
