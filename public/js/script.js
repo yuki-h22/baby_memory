@@ -15,3 +15,9 @@ $(function() {
     $(this).addClass('select')
   });
 });
+
+$(function(){
+  $('.btn-default').click(function(){
+    $('.under_box').removeClass('create_baby');
+  });
+})
