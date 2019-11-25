@@ -12,6 +12,9 @@
 */
 // 指定の場合は下記記述
 // Route::get('baby', 'BabyController@index');
-Route::resource('baby', 'BabyController');
-Route::resource('user', 'UserController');
-Route::resource('content', 'ContentController');
+Route::resource('baby', 'BabiesController');
+// Route::get('create_create', [
+//   'babies' => 'BabyController@create'
+// ]);
+Route::resource('user', 'UsersController');
+Route::resource('content', 'ContentsController');
