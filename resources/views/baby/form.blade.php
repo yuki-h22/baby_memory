@@ -1,3 +1,4 @@
+@extends('baby/create')
 @section('content')
 <div class="container ops-main">
     <div class="row">
