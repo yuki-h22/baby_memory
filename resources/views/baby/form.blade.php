@@ -26,7 +26,8 @@
                 </div>
                 <div class="form-group">
                     <label for="price">お誕生日</label>
-                    <input type="image" class="form-control" name="image" value="{{ $baby->image }}">
+                    <form method="post" action="{{ action('BabiesController@store') }}" enctype="multipart/form-data">
+                        {{ csrf_field() }}
                 </div>
                 <button type="submit" class="btn btn-default">登録</button>
                 <a href="/baby">戻る</a>
