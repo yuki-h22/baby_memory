@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+// use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BabyRequest;
 use App\Baby;
@@ -22,16 +22,8 @@ class BabiesController extends Controller
       $baby = new Baby();
       $baby->name = $request->name;
       $baby->birthday = $request->birthday;
-      $params = $request->validate([
-        'image' => 'required|file|image|max:4000',]);
-      $file = $params['image'];
-      $image = \Image::make(file_get_contents($file->getRealPath()));
-      $image
-      ->save(public_path().'/images/'.$file->hashName())
-      ->resize(300, 300)
-      ->save(public_path().'/images/300-300-'.$file->hashName())
-      ->resize(500, 500)
-      ->save(public_path().'/images/500-500-'.$file->hashName());
+    //   $time = date("Ymdhis");
+    //   $baby->image = $request->image->storeAs('storage/app/public', $time.'_'.Auth::user()->id . '.png');
       $baby->image = $request->image;
       $baby->save();
 
