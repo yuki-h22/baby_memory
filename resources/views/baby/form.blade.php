@@ -2,7 +2,7 @@
 <div class="container ops-main">
     <div class="row">
         <div class="col-md-6">
-            <h2>書籍登録</h2>
+            <h2>生まれた赤ちゃん</h2>
         </div>
     </div>
     <div class="row">
@@ -25,9 +25,18 @@
                     <input type="text" class="form-control" name="birthday" value="{{ $baby->birthday }}">
                 </div>
                 <div class="form-group">
-                    <label for="price">お誕生日</label>
+                    <label for="price">写真</label>
                     <form method="post" action="{{ action('BabiesController@store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
+                    <fieldset>
+                        <div>
+                            <input id="file" type="file" name="image">
+            
+                            @if ($errors->has('image'))
+                                {{ $errors->first('image') }}
+                            @endif
+                        </div>
+                    </fieldset>
                 </div>
                 <button type="submit" class="btn btn-default">登録</button>
                 <a href="/baby">戻る</a>
