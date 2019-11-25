@@ -5,15 +5,15 @@
       top
         <div class="side_bar_top_image">
             {{-- @if($baby->image == null) --}}
-                <img src="/storage/noimage.png" >
+                <img src="/storage/noimage.png" id="topicon">
             {{-- @else --}}
                 {{-- <img src="/storage/{{$user->image}}"> --}}
             {{-- @endif --}}
         </div>
     </div>
     <div class="side_bar_data">
-        <div class="side_bar_data_name"></div>
-        <div class="side_bar_data_birthday"></div>
+        <div class="side_bar_data_name">ひなた</div>
+        <div class="side_bar_data_birthday">image</div>
     </div>
     <div class="side_bar_under">
         <div class="side_bar_under_image">
