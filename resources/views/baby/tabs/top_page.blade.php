@@ -4,11 +4,11 @@
     <div class="side_bar_top">
       top
         <div class="side_bar_top_image">
-            @if($baby->image == null)
-                <img src="/storage/noimage.png">
-            @else
-                <img src="/storage/{{$user->image}}">
-            @endif
+            {{-- @if($baby->image == null) --}}
+                <img src="/storage/noimage.png" >
+            {{-- @else --}}
+                {{-- <img src="/storage/{{$user->image}}"> --}}
+            {{-- @endif --}}
         </div>
     </div>
     <div class="side_bar_data">
