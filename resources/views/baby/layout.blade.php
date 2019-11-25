@@ -16,6 +16,17 @@
 </header>
 
 <body class = "body">
+
+@if($target == 'store')
+@yield('content')
+
+
+
+
+
+
+
+@else
 <ul class="tab">
   <li class="select">TOP Page</li>
   <li>０〜2ヶ月</li>
@@ -38,5 +49,6 @@
   <li class="hide"> @yield('setting')</li>
 
 </ul>
+@endif
 
 </body>
