@@ -17,7 +17,7 @@ class CreateBabiesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name', 50);
             $table->integer('birthday');
-            $table->text('image')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +29,8 @@ class CreateBabiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('babies');
+        Schema::dropIfExists('babies', function (Blueprint $table) {
+            $table->dropColumn('image');
+        });
     }
 }
