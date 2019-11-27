@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-// use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BabyRequest;
 use App\Baby;
@@ -10,10 +9,7 @@ class BabiesController extends Controller
 {
   public function index()
   {
-      // DBよりbabyテーブルの値を全て取得
       $babies = Baby::all();
-
-      // 取得した値をビュー「baby/index」に渡す
       return view('baby/index', compact('babies'));
   }
 
@@ -22,8 +18,6 @@ class BabiesController extends Controller
       $baby = new Baby();
       $baby->name = $request->name;
       $baby->birthday = $request->birthday;
-    //   $time = date("Ymdhis");
-    //   $baby->image = $request->image->storeAs('storage/app/public', $time.'_'.Auth::user()->id . '.png');
       $baby->image = $request->image;
       $baby->save();
 
@@ -38,10 +32,8 @@ class BabiesController extends Controller
 
   public function edit($id)
   {
-      // DBよりURIパラメータと同じIDを持つbabyの情報を取得
       $baby = Baby::findOrFail($id);
 
-      // 取得した値をビュー「baby/edit」に渡す
       return view('baby/edit', compact('baby'));
   }
 
