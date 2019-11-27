@@ -11,7 +11,7 @@ class BabyRequest extends FormRequest
         return [
             'name' => 'required|string|max:50',
             'birthday' => 'required|integer',
-            'image' => 'nullable|text',
+            'image' => 'required|image|nullable',
         ];
     }
 }
