@@ -29,7 +29,7 @@
 @endsection
 
 @section('setting')
-    @include('baby/create')
+    @include('baby/tabs/setting')
 @endsection
 
 
