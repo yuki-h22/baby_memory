@@ -11,17 +11,18 @@
 |
 */
 // 指定の場合は下記記述
-// Route::get('baby', 'BabyController@index');
-Route::resource('baby', 'BabiesController');
+Route::get('baby', 'BabiesController@index');
+// Route::resource('baby', 'BabiesController');
 // Route::get('/baby','babiesController@index');
 // Route::post('/baby','babiesController@store');
 // Route::get('create_create', [
 //   'babies' => 'BabyController@create'
 // ]);
-Route::resource('user', 'UsersController');
-Route::resource('content', 'ContentsController');
 Route::get('/', 'BabiesController@index');
+Route::get('baby/create', 'BabiesController@create');
+
 Route::get('baby/{id}', 'BabiesController@show');
 
-Route::post('baby/image_confirm', 'BabiesController@postImageConfirm');
-Route::post('baby/image_complete', 'BabiesController@postImageComplete');
+Route::post('/image_confirm', 'BabiesController@postImageConfirm')->name("image_confirm");
+Route::post('/image_complete', 'BabiesController@postImageComplete');
+
