@@ -20,3 +20,5 @@ Route::resource('baby', 'BabiesController');
 // ]);
 Route::resource('user', 'UsersController');
 Route::resource('content', 'ContentsController');
+Route::get('/', 'BabiesController@index');
+Route::get('baby/{id}', 'BookController@show');
