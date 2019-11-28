@@ -20,6 +20,7 @@ Route::get('baby', 'BabiesController@index');
 // ]);
 Route::get('/', 'BabiesController@index');
 Route::get('baby/create', 'BabiesController@create');
+Route::post('baby/create', 'BabiesController@create');
 
 Route::get('baby/{id}', 'BabiesController@show');
 
