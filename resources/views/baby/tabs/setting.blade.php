@@ -21,7 +21,7 @@
           <a href="/baby/{{ $baby->id }}/edit">{{ $baby->name }}</a>
         </td>
         <td>{{ $baby->birthday }}</td>
-        <td>{{ $baby->image }}</td>
+        <td><img src="{{ $baby->image }}" width="20" height="20"></td>
         <td>
           <form action="/baby/{{ $baby->id }}" method="post">
             <input type="hidden" name="_method" value="DELETE">
@@ -38,7 +38,7 @@
 </div>
 
 <div class = "create_baby under_box">
-  <form method="post" action="baby" enctype="multipart/form-data">
+  <form method="post" action="baby/image_confirm" enctype="multipart/form-data">
       <div class="form-group">
           <label for="name">おなまえ</label>
           <input type="text" class="form-control" name="name">
@@ -48,11 +48,11 @@
           <input type="text" class="form-control" name="birthday">
       </div>
       <div class="form-group">
-          <label for="price">写真</label>
+          <label for="image">写真</label>
               {{ csrf_field() }}
           <fieldset>
               <div>
-                  <input id="file" type="file" name="image">
+                  <input id="file" type="file" name="imagefile">
                   @if ($errors->has('image'))
                       {{ $errors->first('image') }}
                   @endif
