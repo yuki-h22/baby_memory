@@ -21,4 +21,7 @@ Route::resource('baby', 'BabiesController');
 Route::resource('user', 'UsersController');
 Route::resource('content', 'ContentsController');
 Route::get('/', 'BabiesController@index');
-Route::get('baby/{id}', 'BookController@show');
+Route::get('baby/{id}', 'BabiesController@show');
+
+Route::post('baby/image_confirm', 'BabiesController@postImageConfirm');
+Route::post('baby/image_complete', 'BabiesController@postImageComplete');
